@@ -45,6 +45,7 @@ namespace VVVV.Audio
             beat = btrack.beatDueInCurrentFrame();
             bpm = btrack.getCurrentTempoEstimate();
 
+
             framePtr = (IntPtr)null;
             handle.Free();
 
@@ -53,6 +54,33 @@ namespace VVVV.Audio
             //    //call ProcessAudioFrame -uses IntPtr to access the sample array
             //    btrack.processAudioFrame(new IntPtr(fptr));
             //}
+        }
+
+        public void FixTempo(bool fixedTempo, double tempo)
+        {
+            if (fixedTempo)
+            {
+                btrack.fixTempo(tempo);
+            }
+            else
+            {
+                btrack.doNotFixTempo();
+            }
+        }
+
+        public void SetTempo(double tempo)
+        {
+            btrack.setTempo(tempo);
+        }
+
+        public void SetAlpha(double alpha)
+        {
+            btrack.setAlpha(alpha);
+        }
+
+        public void ProcessOnsetDetectionFunctionSample(double sample)
+        {
+            btrack.processOnsetDetectionFunctionSample(sample);
         }
 
         public bool Beat

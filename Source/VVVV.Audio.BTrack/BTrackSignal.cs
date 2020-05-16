@@ -13,6 +13,7 @@ namespace VVVV.Audio
 
         private bool isValid = false;
         private bool beatReadFlag = false;
+        private bool fixedTempo = false;
         
         void InitBTrack()
         {
@@ -27,7 +28,7 @@ namespace VVVV.Audio
             // TODO: warn, when samplerate is not 44100 Hz
             if (SampleRate == 44100 && BufferSize >= 2)
             {
-                FBTrack = new BTrack((int)(BufferSize * 0.5), BufferSize);
+                FBTrack = new BTrack(/*int)(BufferSize * 0.5)*/BufferSize, BufferSize);
                 isValid = true;
             }
                 
@@ -81,6 +82,26 @@ namespace VVVV.Audio
         public void NotifyBeatRead()
         {
             beatReadFlag = true;
+        }
+
+        public void NotifyFixedTempo(bool fixedTempo, double tempo)
+        {
+            FBTrack.FixTempo(fixedTempo, tempo);
+        }
+
+        public void NotifyTempoChanged(double tempo)
+        {
+            FBTrack.SetTempo(tempo);
+        }
+
+        public void NotifyAlpha(double alpha)
+        {
+            FBTrack.SetAlpha(alpha);
+        }
+
+        public void NotifyODFSample(double sample)
+        {
+            FBTrack.ProcessOnsetDetectionFunctionSample(sample);
         }
 
         public override void Dispose()
