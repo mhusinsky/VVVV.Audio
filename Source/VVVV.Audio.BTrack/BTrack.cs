@@ -12,7 +12,7 @@ namespace VVVV.Audio
     {
         private BTrackCLI btrack;
 
-        protected double[] tmpdata = new double[1024];
+        protected double[] tmpdata = new double[4096];
 
         private bool beat;
         private double bpm;
