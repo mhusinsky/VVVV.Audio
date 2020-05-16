@@ -1,11 +1,11 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha39.1.dtd" >
-   <PATCH nodename="C:\vvvv\vvvv_beta_39.1-4325_preview_x64\packs\VVVV.Audio\nodes\plugins\BTrack (VAudio Sink) help.v4p" systemname="BTrack (VAudio Sink) help" filename="C:\vvvv\vvvv_50beta38.1_x64\packs\VVVV.Audio\nodes\plugins\BTrack (VAudio Sink) help.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="4090" top="2710" width="11400" height="10370">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
+   <PATCH nodename="C:\vvvv\vvvv_beta_39_x64\packs\VVVV.Audio\nodes\plugins\BTrack (VAudio Sink) help.v4p" systemname="BTrack (VAudio Sink) help" filename="C:\vvvv\vvvv_50beta38.1_x64\packs\VVVV.Audio\nodes\plugins\BTrack (VAudio Sink) help.v4p" scrollx="20" scrolly="10">
+   <BOUNDS type="Window" left="1140" top="1200" width="12270" height="11860">
    </BOUNDS>
-   <NODE systemname="FileStream (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="FileStream (VAudio)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="2205" top="3805" width="100" height="100">
+   <NODE systemname="FileStream (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="FileStream (VAudio)" componentmode="Hidden" id="1" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="1705" top="4005" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2205" top="3805" width="3000" height="3000">
+   <BOUNDS type="Box" left="1705" top="4005" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Audio Out" visible="1">
    </PIN>
@@ -60,14 +60,14 @@
    </LINK>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="dx11.particles" Version="1.0.6">
+   <PACK Name="dx11.particles" Version="1.0.7">
    </PACK>
-   <PACK Name="addonpack" Version="39.1.0">
+   <PACK Name="addonpack" Version="39.0.0">
    </PACK>
-   <NODE systemname="MatrixMixer (VAudio Filter)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="MatrixMixer (VAudio Filter)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="2205" top="5105" width="100" height="100">
+   <NODE systemname="MatrixMixer (VAudio Filter)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="MatrixMixer (VAudio Filter)" componentmode="Hidden" id="7" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="2205" top="6405" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2205" top="5105" width="3000" height="3000">
+   <BOUNDS type="Box" left="2205" top="6405" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Output Count" slicecount="1" values="1">
    </PIN>
@@ -79,9 +79,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10">
-   <BOUNDS type="Box" left="1425" top="2800" width="480" height="480">
+   <BOUNDS type="Box" left="935" top="2970" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="1425" top="2800" width="0" height="0">
+   <BOUNDS type="Node" left="935" top="2970" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -101,9 +101,9 @@
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Play">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11">
-   <BOUNDS type="Box" left="2370" top="2800" width="480" height="465">
+   <BOUNDS type="Box" left="1870" top="3000" width="480" height="465">
    </BOUNDS>
-   <BOUNDS type="Node" left="2370" top="2800" width="0" height="0">
+   <BOUNDS type="Node" left="1870" top="3000" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -138,22 +138,10 @@
    </NODE>
    <LINK srcnodeid="2" srcpinname="Buffer Size" dstnodeid="12" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="AudioOut (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="AudioOut (VAudio)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="1005" top="4540" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1005" top="4540" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Channel Offset" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="1" srcpinname="Audio Out" dstnodeid="13" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14">
-   <BOUNDS type="Box" left="3180" top="2800" width="800" height="240">
+   <BOUNDS type="Box" left="2680" top="3000" width="800" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3180" top="2800" width="0" height="0">
+   <BOUNDS type="Node" left="2680" top="3000" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -166,10 +154,10 @@
    </NODE>
    <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Speed">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15">
-   <BOUNDS type="Box" left="2660" top="4745" width="795" height="240">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" hiddenwhenlocked="1">
+   <BOUNDS type="Box" left="2660" top="6045" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2660" top="4745" width="0" height="0">
+   <BOUNDS type="Node" left="2660" top="6045" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>
@@ -180,10 +168,10 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Gain">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16">
-   <BOUNDS type="Box" left="2640" top="4255" width="795" height="240">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" hiddenwhenlocked="1">
+   <BOUNDS type="Box" left="2140" top="4455" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2640" top="4255" width="0" height="0">
+   <BOUNDS type="Node" left="2140" top="4455" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -197,7 +185,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8240" top="2920" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|ASIO4ALL v2|">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Voicemeeter Virtual ASIO|">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="|ASIO Fireface|">
    </PIN>
@@ -221,9 +209,9 @@
    <LINK srcnodeid="2" srcpinname="Time" dstnodeid="18" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="19">
-   <BOUNDS type="Box" left="8400" top="1900" width="1590" height="270">
+   <BOUNDS type="Box" left="8400" top="2300" width="1590" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="8400" top="1900" width="0" height="0">
+   <BOUNDS type="Node" left="8400" top="2300" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="44100">
    </PIN>
@@ -236,22 +224,10 @@
    </NODE>
    <LINK srcnodeid="19" srcpinname="Output Enum" dstnodeid="2" dstpinname="Sample Rate">
    </LINK>
-   <NODE id="22" systemname="BTrack (VAudio Sink)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.BTrack.dll" nodename="BTrack (VAudio Sink)" componentmode="Hidden">
-   <BOUNDS type="Node" left="2220" top="6190" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2220" top="6190" width="2000" height="2000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Beat" visible="1">
-   </PIN>
-   <PIN pinname="BPM" visible="1">
-   </PIN>
-   </NODE>
    <NODE id="9" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3245" top="6905" width="795" height="240">
+   <BOUNDS type="Box" left="9690" top="8020" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3245" top="6905" width="0" height="0">
+   <BOUNDS type="Node" left="9690" top="8020" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -259,15 +235,15 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="BPM">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="151.999080882353">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE id="8" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2205" top="6805" width="480" height="480">
+   <BOUNDS type="Box" left="2210" top="7800" width="1020" height="810">
    </BOUNDS>
-   <BOUNDS type="Node" left="2205" top="6805" width="0" height="0">
+   <BOUNDS type="Node" left="2210" top="7800" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -279,67 +255,19 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Beat">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="22" srcpinname="Beat" dstnodeid="8" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="BPM" dstnodeid="9" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="22" dstpinname="Input">
-   </LINK>
-   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="3070" top="8310" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Period" visible="1">
-   </PIN>
-   <PIN pinname="Change" visible="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="3060" top="7750" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input" slicecount="1" values="60">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="24" dstpinname="Period">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26">
-   <BOUNDS type="Box" left="3430" top="8820" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3430" top="8820" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="24" srcpinname="Change" dstnodeid="26" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Reset">
-   </LINK>
-   <NODE systemname="SystemFolder (File)" nodename="SystemFolder (File)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="4210" top="2830" width="100" height="100">
+   <NODE systemname="SystemFolder (File)" nodename="SystemFolder (File)" componentmode="Hidden" id="29" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="3710" top="3030" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="4210" top="3240" width="100" height="100">
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="30" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="3710" top="3440" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -375,9 +303,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="33">
-   <BOUNDS type="Node" left="7050" top="1440" width="3100" height="230">
+   <BOUNDS type="Node" left="7350" top="1840" width="3100" height="230">
    </BOUNDS>
-   <BOUNDS type="Box" left="7050" top="1440" width="3100" height="230">
+   <BOUNDS type="Box" left="7350" top="1840" width="3100" height="230">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Important: BTrack only supports 44100 Hz!|">
    </PIN>
@@ -388,28 +316,12 @@
    <PIN pinname="String Type" slicecount="1" values="Url">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Audio Out" dstnodeid="7" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="36">
-   <BOUNDS type="Node" left="390" top="1450" width="2410" height="230">
+   <BOUNDS type="Node" left="5560" top="400" width="2410" height="230">
    </BOUNDS>
-   <BOUNDS type="Box" left="390" top="1450" width="4400" height="490">
+   <BOUNDS type="Box" left="5560" top="400" width="4730" height="820">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|BTrack is the work of Adam Stark&cr;&lf;.net Wrapper and VVVV.Audio plugin by motzi|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="37">
-   <BOUNDS type="Node" left="290" top="6520" width="3430" height="230">
-   </BOUNDS>
-   <BOUNDS type="Box" left="290" top="6520" width="1660" height="620">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|BTrack apparently outputs only every other beat|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|BTrack is the work of Adam Stark:&cr;&lf;https://adamstark.co.uk/project/btrack-a-real-time-beat-tracker/&cr;&lf;&cr;&lf;.net Wrapper and VVVV.Audio plugin by motzi|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -421,9 +333,9 @@
    <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="38">
    <BOUNDS type="Node" left="8550" top="4030" width="4600" height="230">
    </BOUNDS>
-   <BOUNDS type="Box" left="8550" top="4030" width="2090" height="550">
+   <BOUNDS type="Box" left="8550" top="4030" width="2710" height="690">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Buffer Size should not be too small (1024 sample seems to work)|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|BufferSize of 512 samples seems to work most accurate. Change your Audio Settings accordingly.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -432,4 +344,332 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
+   </PACK>
+   <NODE nodename="HSV (Color Join)" id="45" hiddenwhenlocked="1">
+   <PIN pinname="Hue" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Node" left="1870" top="9330" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Decay (Animation)" nodename="Decay (Animation)" componentmode="Hidden" id="46" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="2220" top="8900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Decay" slicecount="1" values="0.4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Output" dstnodeid="45" dstpinname="Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="47">
+   <BOUNDS type="Node" left="400" top="1480" width="4030" height="230">
+   </BOUNDS>
+   <BOUNDS type="Box" left="400" top="1480" width="4010" height="950">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|BTrack is a realtime audio beat tracker for music. It will try to follow, adjust and predict the next beat and output it as a bang. &cr;&lf;&cr;&lf;Note: It will output only BPM-values between 80 and 160.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="46" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="50">
+   <BOUNDS type="Box" left="7840" top="5420" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7840" top="5420" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Count In|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (EX9)" filename="" nodename="Renderer (EX9)" componentmode="InAWindow" id="43" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="880" top="10160" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="880" top="10160" width="4000" height="3000">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13260" top="1210" width="4520" height="5880">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Quad (DX9)" filename="" nodename="Quad (DX9)" componentmode="Hidden" id="44" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="880" top="9770" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1040" top="9770" width="2000" height="2000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Output" dstnodeid="44" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Layer" dstnodeid="43" dstpinname="Layers">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="51">
+   <BOUNDS type="Node" left="8710" top="8550" width="3920" height="230">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8710" top="8550" width="2670" height="610">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Don&apos;t take this BPM value too seriously. BTrack outputs a value that is quantized to about 2-3 BPM.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="AudioOut (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="AudioOut (VAudio)" componentmode="Hidden" id="58" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="650" top="6230" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="650" top="6230" width="2000" height="2000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="59" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="2220" top="5540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" slicecount="1" values="1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Audio Out" dstnodeid="59" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="1760" y="4905">
+   </LINKPOINT>
+   <LINKPOINT x="2490" y="4905">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="AudioIn (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="AudioIn (VAudio Source)" componentmode="Hidden" id="60" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5240" top="3080" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5240" top="3080" width="2000" height="2000">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="61" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5240" top="3460" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="60" srcpinname="Audio Out" dstnodeid="61" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Output Node" dstnodeid="59" dstpinname="Input 2" linkstyle="Bezier">
+   <LINKPOINT x="5240" y="4630">
+   </LINKPOINT>
+   <LINKPOINT x="2810" y="4630">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="62" hiddenwhenlocked="1">
+   <BOUNDS type="Box" left="890" top="4850" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="890" top="4850" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="59" dstpinname="Switch">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="63">
+   <BOUNDS type="Node" left="8570" top="5240" width="4830" height="230">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8570" top="5240" width="2020" height="600">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|The Count In Bang can be used to approximate a tempo by banging.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="64">
+   <BOUNDS type="Box" left="8940" top="6440" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8940" top="6440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.8">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Alpha">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0.9">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="65">
+   <BOUNDS type="Node" left="9860" top="6200" width="1250" height="230">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9860" top="6200" width="1920" height="1420">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Alpha is the rate how quickly the detection function will adjust. Lower values means faster adjustments.&cr;&lf;&cr;&lf;0.9 is recommended by Adam Stark.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="66">
+   <BOUNDS type="Box" left="5970" top="5910" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5970" top="5910" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="95">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Tempo BPM|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="67">
+   <BOUNDS type="Node" left="5970" top="5240" width="1660" height="230">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5970" top="5240" width="1420" height="390">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Initialize a tempo manually.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="68">
+   <BOUNDS type="Box" left="4080" top="5910" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4080" top="5910" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Fixed Tempo|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="69">
+   <BOUNDS type="Node" left="3850" top="5140" width="5250" height="230">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3850" top="5140" width="1970" height="610">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Fixed Tempo will force the algorithm to stay around the Tempo BPM value.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="73" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="410" top="9200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="74" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="490" top="8780" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.2">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Output" dstnodeid="74" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output" dstnodeid="73" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="Transform Out" dstnodeid="44" dstpinname="Transform">
+   </LINK>
+   <NODE id="75" systemname="BTrack (VAudio Sink)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.BTrack.dll" nodename="BTrack (VAudio Sink)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2220" top="7190" width="7540" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2220" top="7190" width="2000" height="2000">
+   </BOUNDS>
+   <PIN pinname="Beat" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="75" srcpinname="Beat" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Count In">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Tempo BPM">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Fixed Tempo">
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="BPM" dstnodeid="9" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="75" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="58" dstpinname="Input">
+   </LINK>
    </PATCH>
